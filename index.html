@@ -158,51 +158,51 @@
           </main>
 
           <!-- About section -->
+          <main>
           <section id="about" class="hidden-section">
             <h2 class="about-main-header">About</h2>
             <p></p>
           </section>
-
+          </main>
           <!-- Mission section -->
+          <main>
           <section id="mission" class="hidden-section">
             <h2 class="mission-header">Mission</h2>
             <p></p>
           </section>
+          </main>
 
           <!-- Contact section -->
+
+          <main>
           <section id="contact" class="hidden-section">
             <h2 class="contact-header">Contact</h2>
             <p></p>
           </section>
+          </main>
 
-          <!-- Donation Form section -->
-          <section id="donation" class="hidden-section">
+           <!-- Donation Form section -->
+           <section id="donation" class="hidden-section">
             <div class="donation-form-container">
               <div class="donation-form">
                 <h2 class="form-header">Make a Donation Today</h2>
                 <p class="form-description">
-                  Help us support food rescue and end hunger.
-                </p>
-                <p class="form-details">
-                  FeedAll is set up to take both large volumes of surplus food
-                  as well as small quantities from across the food and drink
-                  industry. We accept all kinds of fresh, frozen, ambient and
-                  chilled food and drink, including retailer branded foods in
-                  all forms, from bulk ingredients and unfinished products to
-                  labelling errors and damages.
-                </p>
-                <p class="form-details">
-                  We collect it from you, then take it to our sorting warehouse.
-                  From there we distribute the food to needy families,
-                  individuals and groups in the community across our two
-                  distribution centres. You can get your surplus to people in
-                  need easily using FeedAll.
-                </p>
-                <p class="form-details">
+              
                   Your donation helps us provide vital support today, and
                   campaign for a better future where everyone can afford the
                   essentials.
+                
                 </p>
+                <p class="form-details">
+                  FeedAll is set up to accept all kinds of fresh, frozen, ambient and chilled foods
+                  and drink, including retailer branded foods in all forms.
+                </p>
+                <p class="form-details">
+                  We collect it from you, sorting them and then distribute the food to needy families,
+                  individuals and groups in the community across our two
+                  distribution centres.
+                </p>
+               
                 <h3 class="form-subheader">
                   Please complete the form below and someone from our food
                   rescue team will get back to you.
@@ -250,24 +250,81 @@
                 </form>
               </div>
             </div>
-          </section>
+          </section> 
 
-          <!-- Recipient Form section -->
-          <section id="get-food-form" class="hidden-section"></section>
-        </div>
-      </div>
-    </div>
+         
 
-    <section id="food-list" class="hidden-section">
+    <!-- Foodbank page structure -->
+
+
+    <!-- Food Bank Section -->
+    <section id="food-bank" class="hidden-section">
       <h2>Available Food Items</h2>
+      
+        <!--Food Filter options -->
+        <div id="food-filter">
+          <label for="category-filter">Filter by Category:</label>
+          <select id="category-filter">
+            <option value="">All Categories</option>
+            <option value="proteins">Proteins</option>
+            <option value="carbs">Carbs</option>
+            <option value="vegetables">Vegetables</option>
+            <option value="fruits">Fruits</option>
+            <option value="drinks">Drinks</option>
+          </select>
+        </div>
+      
       <div id="food-items-container" class="food-grid"></div>
     </section>
 
-    <!-- Add to cart section -->
+    <!-- Cart Section -->
+    <section id="cart" class="hidden-section">
+      <h2>Cart Summary</h2>
+      <div id="cart-items-container"></div>
+      <button id="proceed-to-checkout">Proceed to Checkout</button>
+    </section>
 
+    <!-- Checkout Form Section -->
+
+    <section id="checkout-form" class="hidden-section">
+      <h2>Checkout</h2>
+
+      <!-- Recipient form fields -->
+      <form>
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" required />
+
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" required />
+
+        <label for="contact">Contact</label>
+        <input type="text" id="contact" name="contact" required />
+
+        <label for="location">Location</label>
+        <input type="text" id="location" name="location" required />
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+   
+<!-- 
+    Confirmation card section -->
+    <section id="confirmation" class="hidden-section">
+      <div class="confirmation-card">
+        <h2>Thank you!</h2>
+        <p>Your order has been placed.</p>
+        <p>Our team will reach out to you shortly to arrange how you can pick up your
+      food at one of our distribution centers:</p>
+        <ul>
+          <li>Center 1: Umoja Community Hall</li>
+          <li>Center 2: Heri Social Hall </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 
+    Footer content  -->
     <footer>
-      <!-- Footer content -->
-
       &copy;<span id="year"> </span
       ><span>2024. FeedAll. All rights reserved.</span>
     </footer>
