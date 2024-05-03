@@ -1,3 +1,4 @@
+//funtion to display the donor's Thank you card
 function showThankYou() {
   const form = document.getElementById("foodForm");
   const thankYouCard = document.getElementById("thankYouCard");
