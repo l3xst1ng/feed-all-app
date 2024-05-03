@@ -207,16 +207,26 @@
                   Please complete the form below and someone from our food
                   rescue team will get back to you.
                 </h3>
-                <form>
+                <div class="thank-you-card" id="thankYouCard" style="display: none;">
+                  <h2>Thank You!</h2>
+                  <p id="firstNameDisplay"></p>
+                  <p id="lastNameDisplay"></p>
+                  <p id="contactDisplay"></p>
+                  <p id="foodCategoryDisplay"></p>
+                  <p id="descriptionDisplay"></p>
+                  <p id="locationDisplay"></p>
+                </div>
+                
+                <form id="foodForm">
                   <label for="firstName">First Name</label>
                   <input type="text" id="firstName" name="firstName" required />
-
+                
                   <label for="lastName">Last Name</label>
                   <input type="text" id="lastName" name="lastName" required />
-
+                
                   <label for="contact">Contact</label>
                   <input type="text" id="contact" name="contact" required />
-
+                
                   <label for="foodCategory">Food Category</label>
                   <select id="foodCategory" name="foodCategory" required>
                     <option value="">Select a category</option>
@@ -226,7 +236,7 @@
                     <option value="fruits">Fruits</option>
                     <option value="drinks">Drinks</option>
                   </select>
-
+                
                   <label for="description">Description</label>
                   <textarea
                     id="description"
@@ -234,7 +244,7 @@
                     maxlength="250"
                     required
                   ></textarea>
-
+                
                   <label for="picture">Picture</label>
                   <input
                     type="file"
@@ -242,11 +252,11 @@
                     name="picture"
                     accept="image/*"
                   />
-
+                
                   <label for="location">Location</label>
                   <input type="text" id="location" name="location" required />
-
-                  <button type="submit" class="submit-btn">Submit</button>
+                
+                  <button type="button" class="submit-btn" onclick="showThankYou()">Submit</button>
                 </form>
               </div>
             </div>
