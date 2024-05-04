@@ -72,7 +72,7 @@ function showThankYou() {
     "Location: " + form.location.value;
 }
 
-//function that posts data to db.json.
+//function that posts data to db.json.(Andy)
 function postDetails(key){
   const form = document.getElementById("foodForm");
   
@@ -106,4 +106,13 @@ function postDetails(key){
       console.log("Error posting data", error);
     });
   
+};
+function handleDonorSubmission(){
+      postDetails("Donors");// post data to the donors key.
+      showThankYou(); // shows the thank you card.
+};
+function handleRecipientSubmission(event){
+  event.preventDefault();
+  postDetails("Recipients");// post data to the recipients key.
+  showThankYou(); // shows the thank you card.
 };
