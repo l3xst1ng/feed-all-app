@@ -71,3 +71,39 @@ function showThankYou() {
   document.getElementById("locationDisplay").innerText =
     "Location: " + form.location.value;
 }
+
+//function that posts data to db.json.
+function postDetails(key){
+  const form = document.getElementById("foodForm");
+  
+  //Post request to db.json file to specific key
+    fetch(`db.json/${key}`,{
+      method: "POST",
+      body: JSON.stringify({
+        firstName: form.firstName.value,
+        lastName: form.lastName.value,
+        contact: form.contact.value,
+        foodCategory: form.foodCategory.value,
+        description: form.description.value,
+        location: form.location.value,
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      }
+    } 
+    )
+    .then(response => {
+      if (!response.ok){
+        throw new Error(response.statusText);
+      } else {
+        return response.json();
+      }
+    })
+    .then (data => {
+      console.log("Data successfully posted", data)
+    })
+    .catch(error => {
+      console.log("Error posting data", error);
+    });
+  
+};
