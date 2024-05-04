@@ -1,43 +1,54 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const homePage = document.querySelector("#home-page");
-  const aboutSection = document.querySelector("#about");
-  const missionSection = document.querySelector("#mission");
-  const contactSection = document.querySelector("#contact");
-  const donationSection = document.querySelector("#donation");
-  const getFoodForm = document.querySelector("#get-food-form");
+// Function to show the selected nav section and hide the others
 
-  const navItems = document.querySelectorAll("nav a");
 
-  // Toggle section visibility
-  const toggleSection = (id) => {
-    navItems.forEach((item) => item.classList.remove("current"));
-    document.querySelector(`nav a[href="#${id}"]`).classList.add("current");
+const homeSection = document.getElementById("home-page");
 
-    document.querySelectorAll(".hidden-section").forEach((section) => {
-      if (section.id === id) {
-        section.classList.remove("hidden-section");
+const otherSections = document.querySelectorAll(".hidden-section");
+
+const navLinks = document.querySelectorAll("nav ul li a");
+
+
+function showSection(sectionId) {
+    homeSection.style.display = "none"; // Hides the home section
+    otherSections.forEach((section) => {
+      if (section.id === sectionId) {
+        section.style.display = "block";
       } else {
-        section.classList.add("hidden-section");
+        section.style.display = "none";
       }
     });
-  };
-
-  // Adding click event listeners to navigation menu
-  navItems.forEach((item) => {
-    item.addEventListener("click", (e) => {
-      e.preventDefault();
-      toggleSection(item.getAttribute("href").substring(1));
+  }
+  
+  // Displaying the home section by default
+  homeSection.style.display = "block";
+  
+  //  click event listeners to the navigation links
+  navLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault(); // Prevents reloading - the default link behavior
+  
+      // Get the target section ID from the link's href
+      const targetSectionId = event.target.getAttribute("href").slice(1);
+  
+      if (targetSectionId === "home-page") {
+        // If the target section is the home page, show the home section
+        homeSection.style.display = "block";
+        otherSections.forEach((section) => (section.style.display = "none"));
+      } else {
+        // Otherwise, show the target section and hide the other sections
+        showSection(targetSectionId);
+      }
+  
+      // Scroll to the top of the page
+      window.scrollTo(0, 0);
     });
   });
 
-  // Set initial active section
-  toggleSection("home-page");
 
   // Donate button click event
   document.querySelector("#donate-btn-now").addEventListener("click", () => {
     toggleSection("donation");
   });
-});
 //This code handles the navigation menu and toggles the visibility of sections.
 
 //function to display the donor's Thank you card

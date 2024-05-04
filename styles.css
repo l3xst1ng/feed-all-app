@@ -42,9 +42,9 @@ main {
 }
 
 /* Initially hides all sections */
-.content-container {
+/* .content-container {
   display: none;
-}
+} */
 
 .content-container.active {
   display: block; /* Shows the active section */
