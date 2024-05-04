@@ -207,15 +207,7 @@
                   Please complete the form below and someone from our food
                   rescue team will get back to you.
                 </h3>
-                <div class="thank-you-card" id="thankYouCard" style="display: none;">
-                  <h2>Thank You!</h2>
-                  <p id="firstNameDisplay"></p>
-                  <p id="lastNameDisplay"></p>
-                  <p id="contactDisplay"></p>
-                  <p id="foodCategoryDisplay"></p>
-                  <p id="descriptionDisplay"></p>
-                  <p id="locationDisplay"></p>
-                </div>
+                
                 
                 <form id="foodForm">
                   <label for="firstName">First Name</label>
@@ -251,6 +243,7 @@
                     id="picture"
                     name="picture"
                     accept="image/*"
+                    required
                   />
                 
                   <label for="location">Location</label>
@@ -262,7 +255,20 @@
             </div>
           </section> 
 
-         
+<!-- 
+    Donor Thank you card section -->
+    <section id="thank-you" class="hidden-section">
+        <div class="thank-you-card" id="thankYouCard">
+                  <h2>Thank You!</h2>
+                  <p id="firstNameDisplay"></p>
+                  <p id="lastNameDisplay"></p>
+                  <p id="contactDisplay"></p>
+                  <p id="foodCategoryDisplay"></p>
+                  <p id="descriptionDisplay"></p>
+                  <p id="locationDisplay"></p>
+                </div> 
+
+</section>
 
     <!-- Foodbank page structure -->
 
@@ -319,7 +325,7 @@
     </section>
    
 <!-- 
-    Confirmation card section -->
+    Recipient Confirmation card section -->
     <section id="confirmation" class="hidden-section">
       <div class="confirmation-card">
         <h2>Thank you!</h2>
