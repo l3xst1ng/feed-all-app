@@ -42,15 +42,15 @@ main {
 }
 
 /* Initially hides all sections */
-/* .content-container {
-  display: none;
-} */
+.content-container {
+  display: block;
+}
 
 .content-container.active {
   display: block; /* Shows the active section */
 }
 .hidden-section {
-  display: none;
+  display: block;
 }
 .container {
   display: flex;
@@ -563,3 +563,13 @@ footer {
   align-items: center;
   gap: 0.2rem;
 }
+
+.thank-you-card {
+  width: 300px;
+  background-color: yellow;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 50px auto;
+}
+
