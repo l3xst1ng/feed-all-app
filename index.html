@@ -21,7 +21,9 @@
               <a href="#mission">Mission</a>
             </li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="#donate" id= 'donate-btn'class="donate-btn">Donate</a></li>
+            <li>
+              <a href="#donate" id="donate-btn" class="donate-btn">Donate</a>
+            </li>
             <li><a href="#donate" class="get-food-btn">Get Food</a></li>
           </ul>
         </nav>
@@ -72,8 +74,13 @@
                   <div class="section-card what-we-are">
                     <h2 class="explainer-header">What We Are</h2>
                     <p class="explainer-text">
-                      FeedAll is a community non-pofit organization. Together,
-                      we take good quality surplus food from right across the
+                      FeedAll is a community non-pofit organization. We believe
+                      that no good food should ever go to waste when so many go
+                      hungry.
+                    </p>
+
+                    <p class="main-explainer-text-2">
+                      We take good quality surplus food from right across the
                       community and food industry and get it to needy indivuals
                       and groups in our community.
                     </p>
@@ -84,13 +91,14 @@
                   <div class="section-card what-we-do">
                     <h2 class="explainer-header">What We Do</h2>
                     <p class="explainer-text">
-                      We believe that no good food should ever go to waste when
-                      so many go hungry. Through our Food Rescue Program, we
-                      pick up surplus, perfectly edible food from households,
-                      businesses and events, across the community. This rescued
-                      food is immediately redirected to individuals, shelters,
-                      and meal programs serving those facing food insecurity. By
-                      intercepting this nutritious fare before it can be
+                      Our Food Rescue Program is designed to pick up surplus,
+                      perfectly edible food from households, businesses and
+                      events, across the community. This rescued food is
+                      immediately redirected to individuals, shelters, and meal
+                      programs serving those facing food insecurity.
+                    </p>
+                    <p class="main-explainer-text-2">
+                      By intercepting this nutritious fare before it can be
                       discarded, we turn potential waste into nourishing meals
                       while reducing environmental harm.
                     </p>
@@ -159,74 +167,68 @@
 
           <!-- About section -->
           <main>
-          <section id="about" class="hidden-section">
-            <h2 class="about-main-header">About</h2>
-            <p></p>
-          </section>
+            <section id="about" class="hidden-section">
+              <h2 class="about-main-header">About</h2>
+         <p class="about-text">FeedAll is a community-driven non-profit organization dedicated to eradicating hunger and reducing food waste in our neighborhoods. We accept all kinds of fresh, frozen, ambient, and chilled foods and drinks, including retailer-branded items in all forms.</p>
+  <p class="about-text">Our dedicated team collects these food donations, sorts them, and distributes them to needy families, individuals, and groups across our two distribution centers. By redirecting surplus, perfectly edible food from households, businesses, and events, we ensure that no good food goes to waste while simultaneously providing nourishment to those facing food insecurity.</p>
+</section>
+            </section>
           </main>
           <!-- Mission section -->
           <main>
-          <section id="mission" class="hidden-section">
-            <h2 class="mission-header">Mission</h2>
-            <p></p>
-          </section>
+            <section id="mission" class="hidden-section">
+              <h2 class="mission-header">Mission</h2>
+              <p class="mission-text">At FeedAll, our mission is to create a world where no
+                 one goes hungry and no food goes to waste. We strive to bridge the gap between 
+                 surplus food and those in need, ensuring 
+                 that every meal reaches a table and nourishes a life.</p>
+  <p class="mission-text">Through our Food Rescue Program, 
+    we aim to minimize the detrimental environmental impact
+     of food waste while simultaneously uplifting communities 
+     by providing access to nutritious meals. 
+     We believe that everyone deserves the basic human right of food security, 
+    and we are committed to making a lasting difference, one meal at a time.</p>
+            </section>
           </main>
 
           <!-- Contact section -->
 
           <main>
           <section id="contact" class="hidden-section">
-            <h2 class="contact-header">Contact</h2>
-            <p></p>
-          </section>
+  <h2 class="contact-header">Contact</h2>
+  <p class="contact-text">Have a question or want to get involved? We'd love to hear from you!</p>
+  <p class="contact-text">Email: <a href="mailto:info@feedall.org">info@feedall.org</a></p>
+  <p class="contact-text">Phone: (123) 456-7890</p>
+  <p class="contact-text">Address: 123 Main Street, City, State 12345</p>
+</section>
           </main>
 
-           <!-- Donation Form section -->
-           <section id="donation" class="hidden-section">
+          <!-- Donation Form section -->
+          <section id="donation" class="hidden-section">
             <div class="donation-form-container">
               <div class="donation-form">
                 <h2 class="form-header">Make a Donation Today</h2>
                 <p class="form-description">
-              
                   Your donation helps us provide vital support today, and
-                  campaign for a better future where everyone can afford the
-                  essentials.
+                  campaign for a better future where everyone can afford food.
+                </p>
                 
-                </p>
-                <p class="form-details">
-                  FeedAll is set up to accept all kinds of fresh, frozen, ambient and chilled foods
-                  and drink, including retailer branded foods in all forms.
-                </p>
-                <p class="form-details">
-                  We collect it from you, sorting them and then distribute the food to needy families,
-                  individuals and groups in the community across our two
-                  distribution centres.
-                </p>
-               
+
                 <h3 class="form-subheader">
                   Please complete the form below and someone from our food
                   rescue team will get back to you.
                 </h3>
-                <div class="thank-you-card" id="thankYouCard" style="display: none;">
-                  <h2>Thank You! We thank you for your kind donation and we appreciate your spirited fight against hunger</h2>
-                  <p id="firstNameDisplay"></p>
-                  <p id="lastNameDisplay"></p>
-                  <p id="contactDisplay"></p>
-                  <p id="foodCategoryDisplay"></p>
-                  <p id="descriptionDisplay"></p>
-                  <p id="locationDisplay"></p>
-                </div>
-                
+
                 <form id="foodForm">
                   <label for="firstName">First Name</label>
                   <input type="text" id="firstName" name="firstName" required />
-                
+
                   <label for="lastName">Last Name</label>
                   <input type="text" id="lastName" name="lastName" required />
-                
+
                   <label for="contact">Contact</label>
                   <input type="text" id="contact" name="contact" required />
-                
+
                   <label for="foodCategory">Food Category</label>
                   <select id="foodCategory" name="foodCategory" required>
                     <option value="">Select a category</option>
@@ -236,7 +238,7 @@
                     <option value="fruits">Fruits</option>
                     <option value="drinks">Drinks</option>
                   </select>
-                
+
                   <label for="description">Description</label>
                   <textarea
                     id="description"
@@ -244,7 +246,7 @@
                     maxlength="250"
                     required
                   ></textarea>
-                
+
                   <label for="picture">Picture</label>
                   <input
                     type="file"
@@ -252,95 +254,115 @@
                     name="picture"
                     accept="image/*"
                   />
-                
+
                   <label for="location">Location</label>
                   <input type="text" id="location" name="location" required />
-                
-                  <button type="button" class="submit-btn" onclick="showThankYou()">Submit</button>
+
+                  <button
+                    type="button"
+                    class="submit-btn"
+                    onclick="showThankYou()"
+                  >
+                    Submit
+                  </button>
                 </form>
               </div>
             </div>
-          </section> 
+          </section>
 
-         
+          <section id="thankYouCard" class="hidden-section">
+            <div class="thank-you-card">
+              <h2>
+                Thank You! We appreciate you for your kind donation and
+                your spirited fight against hunger. Asante Sana.
+              </h2>
+              <p id="firstNameDisplay"></p>
+              <p id="lastNameDisplay"></p>
+              <p id="contactDisplay"></p>
+              <p id="foodCategoryDisplay"></p>
+              <p id="descriptionDisplay"></p>
+              <p id="locationDisplay"></p>
+            </div>
+          </section>
+          <!-- Foodbank page structure -->
 
-    <!-- Foodbank page structure -->
+          <!-- Food Bank Section -->
+          <section id="food-bank" class="hidden-section">
+            <h2>Available Food Items</h2>
 
+            <!--Food Filter options -->
+            <div id="food-filter">
+              <label for="category-filter">Filter by Category:</label>
+              <select id="category-filter">
+                <option value="">All Categories</option>
+                <option value="proteins">Proteins</option>
+                <option value="carbs">Carbs</option>
+                <option value="vegetables">Vegetables</option>
+                <option value="fruits">Fruits</option>
+                <option value="drinks">Drinks</option>
+              </select>
+            </div>
 
-    <!-- Food Bank Section -->
-    <section id="food-bank" class="hidden-section">
-      <h2>Available Food Items</h2>
-      
-        <!--Food Filter options -->
-        <div id="food-filter">
-          <label for="category-filter">Filter by Category:</label>
-          <select id="category-filter">
-            <option value="">All Categories</option>
-            <option value="proteins">Proteins</option>
-            <option value="carbs">Carbs</option>
-            <option value="vegetables">Vegetables</option>
-            <option value="fruits">Fruits</option>
-            <option value="drinks">Drinks</option>
-          </select>
-        </div>
-      
-      <div id="food-items-container" class="food-grid"></div>
-    </section>
+            <div id="food-items-container" class="food-grid"></div>
+          </section>
 
-    <!-- Cart Section -->
-    <section id="cart" class="hidden-section">
-      <h2>Cart Summary</h2>
-      <div id="cart-items-container"></div>
-      <button id="proceed-to-checkout">Proceed to Checkout</button>
-    </section>
+          <!-- Cart Section -->
+          <section id="cart" class="hidden-section">
+            <h2>Cart Summary</h2>
+            <div id="cart-items-container"></div>
+            <button id="proceed-to-checkout">Proceed to Checkout</button>
+          </section>
 
-    <!-- Checkout Form Section -->
+          <!-- Checkout Form Section -->
 
-    <section id="checkout-form" class="hidden-section">
-      <h2>Checkout</h2>
+          <section id="checkout-form" class="hidden-section">
+            <h2>Checkout</h2>
 
-      <!-- Recipient form fields -->
-      <form>
-        <label for="firstName">First Name</label>
-        <input type="text" id="firstName" name="firstName" required />
+            <!-- Recipient form fields -->
+            <form>
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" required />
 
-        <label for="lastName">Last Name</label>
-        <input type="text" id="lastName" name="lastName" required />
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" required />
 
+              <label for="contact">Contact</label>
+              <input type="text" id="contact" name="contact" required />
 
-        <label for="contact">Contact</label>
-        <input type="text" id="contact" name="contact" required />
+              <label for="location">Location</label>
+              <input type="text" id="location" name="location" required />
 
-        <label for="location">Location</label>
-        <input type="text" id="location" name="location" required />
+              <button type="submit">Submit</button>
+            </form>
+          </section>
 
-        <button type="submit">Submit</button>
-      </form>
-    </section>
-   
-<!-- 
+          <!-- 
     Confirmation card section -->
-    <section id="confirmation" class="hidden-section">
-      <div class="confirmation-card">
-        <h2>Thank you!</h2>
-        <p>Your order has been placed.</p>
-        <p>Our team will reach out to you shortly to arrange how you can pick up your
-      food at one of our distribution centers:</p>
-        <ul>
-          <li>Center 1: Umoja Community Hall</li>
-          <li>Center 2: Heri Social Hall </li>
-        </ul>
+          <section id="confirmation" class="hidden-section">
+            <div class="confirmation-card">
+              <h2>Thank you!</h2>
+              <p>Your order has been placed.</p>
+              <p>
+                Our team will reach out to you shortly to arrange how you can
+                pick up your food at one of our distribution centers:
+              </p>
+              <ul>
+                <li>Center 1: Umoja Community Hall</li>
+                <li>Center 2: Heri Social Hall</li>
+              </ul>
+            </div>
+          </section>
+  </div>
       </div>
-    </section>
-
-    <!-- 
+    
+          <!-- 
     Footer content  -->
-    <footer>
-      &copy;<span id="year"> </span
-      ><span>2024. FeedAll. All rights reserved.</span>
-    </footer>
+          <footer>
+            &copy;<span id="year"> </span
+            ><span>2024. FeedAll. All rights reserved.</span>
+          </footer>
 
-    <script src="src/index.js"></script>
-    </div>
+          <script src="src/index.js"></script>
+      </div>
   </body>
 </html>
