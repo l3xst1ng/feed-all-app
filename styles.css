@@ -26,7 +26,7 @@ main {
 }
 
 .background-container {
-  background-image: url("./Assets/Images/Backgroundpicture.png");
+  background-image: url("./assets/images/Heading.png");
   min-height: 100vh; /*  to cover the entire viewport height */
   background-position: center;
   background-repeat: no-repeat;
@@ -35,12 +35,20 @@ main {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
+  aspect-ratio: 16/9;
 }
 
 .content-wapper {
   flex-grow: 1;
 }
 
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
 /* Initially hides all sections */
 .content-container {
   display: block;
@@ -50,7 +58,7 @@ main {
   display: block; /* Shows the active section */
 }
 .hidden-section {
-  display: block;
+  display: none;
 }
 .container {
   display: flex;
@@ -93,6 +101,8 @@ nav ul li a {
   text-decoration: none;
   padding: 0.5rem;
   transition: background-color 0.3s ease;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
 }
 
 nav ul li a:hover {
@@ -104,7 +114,7 @@ nav ul li a:hover {
   color: #fff;
   font-weight: bold;
   font-size: 18px;
-  padding: 12px 24px;
+  padding: 11px 10px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -120,7 +130,7 @@ nav ul li a:hover {
   background-color: #4caf50; /* Green color */
   color: #fff;
   font-weight: bold;
-  padding: 8px 16px;
+  padding: 12px 11px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -155,14 +165,16 @@ nav ul li a:hover {
 }
 
 #cta {
-  margin-top: 105px;
-  margin-left: 10px;
+  margin-top: 85px;
+  margin-left: 15px;
   margin-right: 10px;
   margin-bottom: 20px;
   padding: 0%;
   font-size: 60px;
   text-transform: uppercase;
-  color: rgb(240, 229, 229);
+  color: #f9232c;
+
+  font-weight: bolder;
   display: flex;
   text-align: center;
   top: 50%;
@@ -186,11 +198,12 @@ nav ul li a:hover {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 300px;
   font-style: normal;
-  font-size: 35px;
-  text-align: justify;
+  font-size: 30px;
+
   margin-bottom: 20px;
   /* color: rgba(240, 229, 229, 0.9); */
-  color: #cce6f1;
+  color: #1a23ad;
+  font-weight: bold;
 }
 .cta-text-2 {
   justify-content: center;
@@ -199,10 +212,11 @@ nav ul li a:hover {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 300px;
   font-style: normal;
-  font-size: 26px;
+  font-size: 24px;
   text-align: center;
   margin-bottom: 20px;
-  color: #eee0c9;
+  color: #1a23ad;
+  font-weight: bold;
 }
 .cta-text-3 {
   justify-content: center;
@@ -211,10 +225,11 @@ nav ul li a:hover {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 500px;
   font-style: normal;
-  font-size: 33px;
+  font-size: 28px;
   text-align: center;
   margin-bottom: 20px;
-  color: #cce6f1;
+  color: #004aad;
+  font-weight: bold;
 }
 
 .side-by-side {
@@ -247,21 +262,42 @@ nav ul li a:hover {
 
 .explainer-header {
   margin-bottom: 10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.6em;
 }
 
 .explainer-text {
   margin-bottom: 0; /* Removes bottom margin for the last paragraph */
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.2em;
+  font-weight: 700px;
+}
+.main-explainer-text-2 {
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 10px;
+  font-size: 1.2em;
+  margin-bottom: 0;
+  font-weight: 700px;
+}
+.explainer-text-2 {
+  margin-bottom: 40px;
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 10px;
+  font-size: 1.2em;
 }
 
-.getting-involved {
-  margin-bottom: 40px;
+.explainer-sub-header {
+  margin-bottom: 10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.3em;
 }
 
 .section-card {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #9bd7fb;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
 }
 
 .involvement-options {
@@ -312,7 +348,31 @@ nav ul li a:hover {
   max-height: 80vh;
   overflow-y: auto;
 }
+.thank-you-card {
+  width: 300px;
+  background-color: yellow;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 50px auto;
+}
 
+.thank-you-card {
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  background-color: #faf4f0;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 9999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 300px;
+  color: #1b383a;
+}
 .form-header {
   font-size: 24px;
   font-weight: bold;
@@ -321,10 +381,6 @@ nav ul li a:hover {
 
 .form-description {
   font-size: 18px;
-  margin-bottom: 20px;
-}
-
-.form-details {
   margin-bottom: 20px;
 }
 
@@ -368,6 +424,64 @@ form textarea {
 
 .submit-btn:hover {
   background-color: #e53935;
+}
+
+.about-main-header {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #004aad;
+}
+
+.about-text {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: #212a31;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+.mission-header {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #004aad;
+}
+
+.mission-text {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+.contact-header {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #004aad;
+}
+
+.contact-text {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.contact-text a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.contact-text a:hover {
+  text-decoration: underline;
 }
 
 /* Food item section */
@@ -548,28 +662,3 @@ footer {
   padding: 1rem;
   margin-top: auto;
 }
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 2rem;
-
-  color: white;
-  font-weight: 500;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.2rem;
-}
-
-.thank-you-card {
-  width: 300px;
-  background-color: yellow;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  margin: 50px auto;
-}
-

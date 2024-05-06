@@ -55,66 +55,137 @@ const handleDonateButtonClicks = () => {
 donateButton.addEventListener("click", handleDonateButtonClicks);
 donateLink.addEventListener("click", handleDonateButtonClicks);
 
-//function to display the donor's Thank you card
-function showThankYou() {
-  const form = document.getElementById("foodForm");
-  const thankYouCard = document.getElementById("thankYouCard");
+// // Handle form submission
+// const donationSection = document.getElementById("donation");
+// const form = document.getElementById("foodForm");
+// const thankYouCard = document.getElementById("thankYouCard");
+// const backToHomeButton = document.createElement("button");
+// backToHomeButton.textContent = "Back to Home";
+
+// backToHomeButton.addEventListener("click", () => {
+//   thankYouCard.style.display = "none";
+//   showSection("home-page");
+// });
+// form.addEventListener("submit", (event) => {
+//   event.preventDefault(); // Prevent the default form submission behavior
+
+//   // An empty object to store the form data
+//   const donorData = {};
+
+//   // Looping through all form fields and add their values to the donorData object
+//   for (let i = 0; i < form.elements.length; i++) {
+//     const field = form.elements[i];
+//     if (field.name && field.value) {
+//       donorData[field.name] = field.value;
+//     }
+//   }
+
+//   // Update the thank you card with the submitted data
+//   // const firstNameDisplay = document.getElementById("firstNameDisplay");
+//   // const lastNameDisplay = document.getElementById("lastNameDisplay");
+//   // const contactDisplay = document.getElementById("contactDisplay");
+//   // const foodCategoryDisplay = document.getElementById("foodCategoryDisplay");
+//   // const descriptionDisplay = document.getElementById("descriptionDisplay");
+//   // const locationDisplay = document.getElementById("locationDisplay");
+
+//   // firstNameDisplay.textContent = `First Name: ${donorData.firstName}`;
+//   // lastNameDisplay.textContent = `Last Name: ${donorData.lastName}`;
+//   // contactDisplay.textContent = `Contact: ${donorData.contact}`;
+//   // foodCategoryDisplay.textContent = `Food Category: ${donorData.foodCategory}`;
+//   // descriptionDisplay.textContent = `Description: ${donorData.description}`;
+//   // locationDisplay.textContent = `Location: ${donorData.location}`;
+
+//   const firstNameDisplay = document.getElementById("firstNameDisplay");
+
+//   thankYouHeader.textContent = `Thank You ${donorData.firstName}! We thank you for your kind donation and we appreciate your spirited fight against hunger`;
+
+//   // Sending the data to the JSON server
+//   fetch("http://localhost:3000/donors", {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify(donorData),
+//   })
+//     .then((response) => response.json())
+//     .then((data) => {
+//       console.log("Success:", data);
+//     })
+//     .catch((error) => {
+//       console.error("Error:", error);
+//       alert("An error occurred while submitting the form.");
+//     });
+// });
+
+// Handle form submission
+const donationSection = document.getElementById("donation");
+const form = document.getElementById("foodForm");
+const thankYouCard = document.getElementById("thankYouCard");
+const backToHomeButton = document.createElement("button");
+backToHomeButton.textContent = "Back to Home";
+
+backToHomeButton.addEventListener("click", () => {
+  thankYouCard.style.display = "none";
+  showSection("home-page");
+});
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault(); // Prevent the default form submission behavior
+
+  // An empty object to store the form data
+  const donorData = {};
+
+  // Looping through all form fields and add their values to the donorData object
+  for (let i = 0; i < form.elements.length; i++) {
+    const field = form.elements[i];
+    if (field.name && field.value) {
+      donorData[field.name] = field.value;
+    }
+  }
+
+  // Update the thank you card with the submitted data
+  const thankYouHeader = document.getElementById("thankYouHeader");
+  const firstNameDisplay = document.getElementById("firstNameDisplay");
+  const lastNameDisplay = document.getElementById("lastNameDisplay");
+  const contactDisplay = document.getElementById("contactDisplay");
+  const foodCategoryDisplay = document.getElementById("foodCategoryDisplay");
+  const descriptionDisplay = document.getElementById("descriptionDisplay");
+  const locationDisplay = document.getElementById("locationDisplay");
+
+  thankYouHeader.textContent = `Thank You ${donorData.firstName}! We thank you for your kind donation and we appreciate your spirited fight against hunger`;
+  firstNameDisplay.textContent = `First Name: ${donorData.firstName}`;
+  lastNameDisplay.textContent = `Last Name: ${donorData.lastName}`;
+  contactDisplay.textContent = `Contact: ${donorData.contact}`;
+  foodCategoryDisplay.textContent = `Food Category: ${donorData.foodCategory}`;
+  descriptionDisplay.textContent = `Description: ${donorData.description}`;
+  locationDisplay.textContent = `Location: ${donorData.location}`;
+
+  // Hide the form and show the thank you card
+  form.style.display = "none";
   thankYouCard.style.display = "block";
+  thankYouCard.appendChild(backToHomeButton);
 
-  // Display submitted details in the thank you card
-  document.getElementById("firstNameDisplay").innerText =
-    "First Name: " + form.firstName.value;
-  document.getElementById("lastNameDisplay").innerText =
-    "Last Name: " + form.lastName.value;
-  document.getElementById("contactDisplay").innerText =
-    "Contact: " + form.contact.value;
-  document.getElementById("foodCategoryDisplay").innerText =
-    "Food Category: " + form.foodCategory.value;
-  document.getElementById("descriptionDisplay").innerText =
-    "Description: " + form.description.value;
-  document.getElementById("locationDisplay").innerText =
-    "Location: " + form.location.value;
-}
-
-//function that posts data to db.json.(Andy)
-function postDetails(key) {
-  const form = document.getElementById("foodForm");
-
-  //Post request to db.json file to specific key
-  fetch(`db.json/${key}`, {
+  // Sending the data to the JSON server
+  fetch("http://localhost:3000/donors", {
     method: "POST",
-    body: JSON.stringify({
-      firstName: form.firstName.value,
-      lastName: form.lastName.value,
-      contact: form.contact.value,
-      foodCategory: form.foodCategory.value,
-      description: form.description.value,
-      location: form.location.value,
-    }),
     headers: {
-      "Content-type": "application/json; charset=UTF-8",
+      "Content-Type": "application/json",
     },
+    body: JSON.stringify(donorData),
   })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(response.statusText);
-      } else {
-        return response.json();
-      }
-    })
+    .then((response) => response.json())
     .then((data) => {
-      console.log("Data successfully posted", data);
+      console.log("Success:", data);
     })
     .catch((error) => {
-      console.log("Error posting data", error);
+      console.error("Error:", error);
+      alert("An error occurred while submitting the form.");
     });
-}
-function handleDonorSubmission() {
-  postDetails("Donors"); // post data to the donors key.
-  showThankYou(); // shows the thank you card.
-}
-function handleRecipientSubmission(event) {
-  event.preventDefault();
-  postDetails("Recipients"); // post data to the recipients key.
-  showThankYou(); // shows the thank you card.
+});
+
+function showThankYou() {
+  // Hide the form and show the thank you card
+
+  thankYouCard.style.display = "block";
+  donationSection.style.display = "none";
 }
