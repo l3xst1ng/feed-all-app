@@ -1,5 +1,81 @@
 {
-    "Donors":[{}],
-    "Recipients":[{}],
-    "Foodbanks":[{}]
-  }
+  "donors": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "Doe",
+      "contact": "123456789",
+      "foodCategory": "proteins",
+      "description": "Fresh and juicy chicken breasts",
+      "picture": "chicken.jpg",
+      "location": "Nairobi",
+
+      "foodItems": [
+        {
+          "id": 1,
+          "description": "Fresh and juicy chicken breasts",
+          "category": "proteins",
+          "imageUrl": "chicken.jpg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "contact": "987654321",
+      "foodCategory": "vegetables",
+      "description": "Fresh surplus cabbages and potatoes",
+      "picture": "veggies.jpg",
+      "location": "Nairobi",
+
+      "foodItems": [
+        {
+          "id": 2,
+          "description": "Fresh surplus cabbages and potatoes",
+          "category": "vegetables",
+          "imageUrl": "veggies.jpg"
+        }
+      ]
+    },
+
+    {
+      "id": 3,
+      "firstName": "James",
+      "lastName": "Smith",
+      "contact": "987654321",
+      "foodCategory": "drinks",
+      "description": "2 packets of fresh mineral water",
+      "picture": "water.jpg",
+      "location": "Nairobi",
+
+      "foodItems": [
+        {
+          "id": 2,
+          "description": "2 packets of fresh mineral water",
+          "category": "drinks",
+          "imageUrl": "water.jpg"
+        }
+      ]
+    }
+  ],
+
+  "recipients": [
+    {
+      "id": 1,
+      "firstName": "Michael",
+      "lastName": "Johnson",
+      "contact": "555555555",
+      "location": "Nairobi"
+    },
+    {
+      "id": 2,
+      "firstName": "Emily",
+      "lastName": "Blunt",
+      "contact": "444444444",
+      "location": "Nairobi"
+    }
+  ],
+
+  "categories": ["proteins", "carbs", "vegetables", "fruits", "drinks"]
+}
